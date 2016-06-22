@@ -1,6 +1,6 @@
 ---
 title: "demonstration R code for some recurrence over text and other categorical series"
-output: html_document
+output: pdf_document
 ---
 
 ```{r}
@@ -29,7 +29,7 @@ library(crqa)
 library(SnowballC)
 source('functions.R') # functions using crqa; see that .R
 
-setwd('~/Dropbox')
+setwd('~/Dropbox/crqa-quickstart')
 
 words = makeWordSequence('testText.txt',stemWords=TRUE,trimPunctuation=TRUE,numbersToFile='outputWords.txt')
 characters = makeCharacterSequence('testText.txt',numbersToFile='outputChars.txt')
