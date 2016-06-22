@@ -1,0 +1,63 @@
+---
+title: "demonstration R code for some recurrence over text and other categorical series"
+output: html_document
+---
+
+```{r}
+
+#
+# demonstration R code for some recurrence over text and other categorical series
+#
+# demo coded by: Rick Dale, cognaction.org/rick/ 
+#
+# shared for: Nonlinear ATI Summer, 2016 in Cincinnati, OH
+#
+# if you are fresh to R (and RStudio) see: 
+# https://www.datacamp.com/courses/free-introduction-to-r
+#
+# if you find this code useful we encourage you to cite the crqa library publication:
+# 
+# Coco, M. I. & Dale, R. (2014). Cross-recurrence quantification analysis of 
+# categorical and continuous time series: an R package. Frontiers in 
+# Quantitative Psychology and Measurement, 5, 510.
+# http://journal.frontiersin.org/article/10.3389/fpsyg.2014.00510/full
+# 
+
+library(tm)
+library(stringi) 
+library(crqa)
+library(SnowballC)
+source('functions.R') # functions using crqa; see that .R
+
+setwd('~/Dropbox')
+
+words = makeWordSequence('testText.txt',stemWords=TRUE,trimPunctuation=TRUE,numbersToFile='outputWords.txt')
+characters = makeCharacterSequence('testText.txt',numbersToFile='outputChars.txt')
+
+# note we set radius to *near* 0
+resChars = crqa(characters, characters, 1, 1, 1, 0.001, F, 2, 2, 0, F, F)     
+
+resChars$RR # you get your RQA measures!
+resChars$DET
+
+# remaining parameters see help(crqa) == uses same parameters as ATI software!
+resWords = crqa(words, words, 1, 1, 1, 0.001, F, 2, 2, 0, F, F)     
+
+plotRP(resChars$RP,'Time (letter)','Time (letter)')
+plotRP(resWords$RP,'Time (word)','Time (word)')
+
+# windowed recurrence example, with fuller parameter specification
+# using the cattail down lyrics example where the song ends on intense, extended
+# mind repetition with the deer telling you you don't know who you are
+words = makeWordSequence('cattaildown_end.txt',stemWords=TRUE,trimPunctuation=TRUE,numbersToFile='outputWords.txt')
+res = wincrqa(words, words, windowstep=10,windowsize=20, 
+              delay=1, embed=1, rescale=1, radius=.001, 
+              normalize=0, mindiagline=2, minvertline=2, tw=1, whiteline=F, trend=F) 
+plot(res$crqwin[,1],type='b',xlab='Window',ylab='RR') # columns in crqwin represent our measures as listed in help(crqa)
+
+
+
+
+
+
+```
