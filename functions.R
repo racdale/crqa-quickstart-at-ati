@@ -1,3 +1,13 @@
+### let's use a look up table to clean special characters
+cleanSpecialChars = function(text) {
+  specialChars = c('\x92')
+  substitution = c('\'')
+  for (i in 1:length(specialChars)) {
+    text = gsub(specialChars[i],substitution[i],text)
+  }
+  return(text)
+}
+
 ### assign a code with an existing list of words (indices used)
 assignCodes = function(cleanTurn,wordCode) {
   series = c()
