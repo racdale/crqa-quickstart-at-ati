@@ -29,8 +29,9 @@ library(crqa)
 library(SnowballC)
 source('crqa-quickstart/functions.R') # functions using crqa; see that .R
 
-setwd('~/Dropbox/crqa-quickstart')
+setwd('~/Dropbox/crqa-quickstart') # move R to the folder with our data files
 
+# these functions are in functions.R
 words = makeWordSequence('testText.txt',stemWords=TRUE,trimPunctuation=TRUE,numbersToFile='outputWords.txt')
 characters = makeCharacterSequence('testText.txt',numbersToFile='outputChars.txt')
 

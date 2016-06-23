@@ -26,6 +26,9 @@ Other code samples:
 
 * **wordFullExample.R**: An example of processing transcript to convert text into numeric series and then perform analysis over it. Also includes an example of LIWC processing for RQA.
 
+* **windowedRQAExample.R**: Using some sample data from Dr. Kentaro Kodama, this code shows how to set a window size and window shift to obtain a time series of RQA measures.
+
+
 
 
 
