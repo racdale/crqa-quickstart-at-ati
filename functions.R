@@ -1,3 +1,23 @@
+### assign a code with an existing list of words (indices used)
+assignCodes = function(cleanTurn,wordCode) {
+  series = c()
+  for (word in unlist(strsplit(cleanTurn,' '))) {
+    series = c(series, which(word==wordCode))
+  }
+  return(series)
+}
+
+cleanText = function(rawText) {
+  rawText = Corpus(VectorSource(rawText))    
+  # eliminate extra whitespace; requires tm
+  rawText = tm_map(rawText, stripWhitespace)
+  rawText = tm_map(rawText, tolower)
+  # eliminate punctuation
+  removepunct = function(x) { return(gsub("[[:punct:]]","",x)) }
+  rawText = tm_map(rawText, removepunct)[[1]]  
+  return(rawText)
+}
+
 # uses crqa
 plotRP = function(RP,xlab,ylab) {
   ij = which(RP==1,arr.ind=T)
