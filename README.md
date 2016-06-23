@@ -9,8 +9,7 @@ Shared for: Nonlinear ATI Summer, 2016 in Cincinnati, OH
 If you find this code useful we encourage you to cite the crqa library publication:
  
 > Coco, M. I. & Dale, R. (2014). Cross-recurrence quantification analysis of categorical and continuous time series: an R package. *Frontiers in Quantitative Psychology and Measurement*, *5*, 510.
-
-[http://journal.frontiersin.org/article/10.3389/fpsyg.2014.00510/full](http://journal.frontiersin.org/article/10.3389/fpsyg.2014.00510/full)
+> [http://journal.frontiersin.org/article/10.3389/fpsyg.2014.00510/full](http://journal.frontiersin.org/article/10.3389/fpsyg.2014.00510/full)
 
 For quick start view the PDF **ATI_Demo_RStudio.pdf**. 
 
