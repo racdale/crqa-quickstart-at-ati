@@ -4,7 +4,7 @@ Demonstration R code for some recurrence over text and other categorical series.
 
 Demo coded by: Rick Dale, cognaction.org/rick/ 
 
-Shared for: Nonlinear ATI Summer, 2016 in Cincinnati, OH
+Shared for: [http://www.apa.org/science/resources/ati/nonlinear.aspx](Nonlinear ATI Summer, 2016 in Cincinnati, OH)
 
 If you find this code useful we encourage you to cite the crqa library publication:
  
@@ -20,6 +20,8 @@ Other code samples:
 * **windowedRQAExample.R**: Using some sample data from Dr. Kentaro Kodama, this code shows how to set a window size and window shift to obtain a time series of RQA measures.
 
 * **handlingSheets.R**: Some further sample R code to do windowed recurrence and work with columns of a CSV file (thanks to Dr. Vicki Dawei Jia for these sample data). These data are categorical.
+
+* **paramSelectionExample.R**: A demonstration of selecting parameters automatically.
 
 If you are fresh to R (and RStudio) see: [https://www.datacamp.com/courses/free-introduction-to-r](https://www.datacamp.com/courses/free-introduction-to-r)
 
