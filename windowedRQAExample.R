@@ -3,8 +3,8 @@
 # sample code: Rick Dale, for ATI 2016 in Cincinnati
 #
 
-NovL = read.csv('Nov-L.csv',header=F)$V1
-NovR = read.csv('Nov-R.csv',header=F)$V1
+NovL = read.csv('data/Nov-L.csv',header=F)$V1
+NovR = read.csv('data/Nov-R.csv',header=F)$V1
 # reflect left and right hand positions of a novice balance participant
 
 # sample rate 120hz, so window size 4 seconds, window step .5 seconds

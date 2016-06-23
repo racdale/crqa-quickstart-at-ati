@@ -27,13 +27,13 @@ library(tm)
 library(stringi) 
 library(crqa)
 library(SnowballC)
-source('crqa-quickstart/functions.R') # functions using crqa; see that .R
+source('functions.R') # functions using crqa; see that .R
 
 setwd('~/Dropbox/crqa-quickstart') # move R to the folder with our data files
 
 # these functions are in functions.R
-words = makeWordSequence('testText.txt',stemWords=TRUE,trimPunctuation=TRUE,numbersToFile='outputWords.txt')
-characters = makeCharacterSequence('testText.txt',numbersToFile='outputChars.txt')
+words = makeWordSequence('data/testText.txt',stemWords=TRUE,trimPunctuation=TRUE,numbersToFile='data/outputWords.txt')
+characters = makeCharacterSequence('data/testText.txt',numbersToFile='data/outputChars.txt')
 
 # note we set radius to *near* 0
 resChars = crqa(characters, characters, 1, 1, 1, 0.001, F, 2, 2, 0, F, F)     
@@ -50,8 +50,8 @@ plotRP(resWords$RP,'Time (word)','Time (word)')
 # windowed recurrence example, with fuller parameter specification
 # using the cattail down lyrics example where the song ends on intense, extended
 # mind repetition with the deer telling you you don't know who you are
-words = makeWordSequence('cattaildown_end.txt',stemWords=TRUE,trimPunctuation=TRUE,numbersToFile='outputWords.txt')
-res = wincrqa(words, words, windowstep=120,windowsize=240, 
+words = makeWordSequence('data/cattaildown_end.txt',stemWords=TRUE,trimPunctuation=TRUE,numbersToFile='data/outputWords.txt')
+res = wincrqa(words, words, windowstep=10,windowsize=50, 
               delay=1, embed=1, rescale=1, radius=.001, 
               normalize=0, mindiagline=2, minvertline=2, tw=1, whiteline=F, trend=F) 
 plot(res$crqwin[,1],type='b',xlab='Window',ylab='RR') # columns in crqwin represent our measures as listed in help(crqa)

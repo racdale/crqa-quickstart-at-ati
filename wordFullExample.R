@@ -15,7 +15,7 @@ source('functions.R')
 
 setwd('~/Dropbox/crqa-quickstart')
 
-fl = 'talkturnsTest.txt'
+fl = 'data/talkturnsTest.txt'
 rawText = readChar(fl,file.info(fl)$size)
 wordCode = unique(unlist(strsplit(cleanText(rawText),' ')))
 turnList = unlist(strsplit(rawText,'\n\n'))
@@ -49,13 +49,13 @@ str(resWords) # see what's in it
 res = drpdfromts(speakerS, speakerI, ws = 200, datatype = "categorical")
 plot(res$profile,type='l')
 
-liwcData = read.table('liwc_example.txt',header=TRUE,sep='\t')
+liwcData = read.table('data/liwc_example.txt',header=TRUE,sep='\t')
 liwcData[1,]
 str(liwcData)
 plot(liwcData$Posemo)
 
 functionSum = rowSums(liwcData[,7:17])
-write.table(functionSum,file='output.txt',row.names=FALSE,col.names=FALSE)
+write.table(functionSum,file='data/output.txt',row.names=FALSE,col.names=FALSE)
 
 Sindices = seq(from=1,to=length(functionSum),by=2)
 Iindices = seq(from=2,to=length(functionSum),by=2)
