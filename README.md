@@ -23,6 +23,8 @@ Other code samples:
 
 * **paramSelectionExample.R**: A demonstration of selecting parameters automatically.
 
+* **recodedTextWithIdentityColumn.R**: Using identity at the front of the text line to create a coded pair of time series to do CRQA with transcripts.
+
 If you are fresh to R (and RStudio) see: [https://www.datacamp.com/courses/free-introduction-to-r](https://www.datacamp.com/courses/free-introduction-to-r)
 
 If you have just installed RStudio, you need to install the required packages, like this:
