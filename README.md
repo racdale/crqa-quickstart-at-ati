@@ -15,7 +15,7 @@ For quick start view the PDF **ATI_Demo_RStudio.pdf**.
 
 Other code samples:
 
-* **wordFullExample.R**: An example of processing transcript to convert text into numeric series and then perform analysis over it. Also includes an example of LIWC processing for RQA.
+* **wordFullExample.R**: An example of processing transcript to convert text into numeric series and then perform analysis over it. Also includes an example of LIWC processing for RQA (thanks to Lena Mueller).
 
 * **windowedRQAExample.R**: Using some sample data from Dr. Kentaro Kodama, this code shows how to set a window size and window shift to obtain a time series of RQA measures.
 
@@ -24,6 +24,8 @@ Other code samples:
 * **paramSelectionExample.R**: A demonstration of selecting parameters automatically.
 
 * **recodedTextWithIdentityColumn.R**: Using identity at the front of the text line to create a coded pair of time series to do CRQA with transcripts.
+
+* **exampleImageProcessing.R**: If you have an image that has an intrinsic temporal axis (e.g., left to right), this script will show you how to use the pixels to convert into a time series (thanks to Dr. Jon Hilpert for the example source images in an educational context).
 
 If you are fresh to R (and RStudio) see: [https://www.datacamp.com/courses/free-introduction-to-r](https://www.datacamp.com/courses/free-introduction-to-r)
 
