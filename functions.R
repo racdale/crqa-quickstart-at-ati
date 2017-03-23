@@ -51,8 +51,12 @@ makeCharacterSequence = function(fl,numbersToFile=NULL) {
 # this function tokenizes with the space character; 
 # you could also improve it by utilizing any white space,
 # or tokenizer like MC_tokenizer, etc.
-makeWordSequence = function(fl,trimPunctuation=FALSE,stemWords=FALSE,numbersToFile=NULL) {
-  rawText = readChar(fl,file.info(fl)$size)
+makeWordSequence = function(fl,trimPunctuation=FALSE,stemWords=FALSE,numbersToFile=NULL,url=FALSE) {
+  if (!url) { # it's a file name
+    rawText = readChar(fl,file.info(fl)$size)
+  } else { # it's a url, get the file
+    rawText = getURL(fl, ssl.verifypeer = FALSE)
+  }
     
   if (trimPunctuation) {
     rawText = Corpus(VectorSource(rawText))    
