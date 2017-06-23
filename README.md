@@ -27,6 +27,8 @@ Other code samples:
 
 * **exampleImageProcessing.R**: If you have an image that has an intrinsic temporal axis (e.g., left to right), this script will show you how to use the pixels to convert into a time series (thanks to Dr. Jon Hilpert for the example source images in an educational context).
 
+* **Excel conversion example/testBook.R**: Demonstration of processing transcripts in Excel to generate different time series (thanks to Dr. Alexia Galati for presenting this example case).
+
 If you are fresh to R (and RStudio) see: [https://www.datacamp.com/courses/free-introduction-to-r](https://www.datacamp.com/courses/free-introduction-to-r)
 
 If you have just installed RStudio, you need to install the required packages, like this:
