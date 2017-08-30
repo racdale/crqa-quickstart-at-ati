@@ -4,7 +4,7 @@ Demonstration R code for some recurrence over text and other categorical series.
 
 Demo coded by: Rick Dale, cognaction.org/rick/ 
 
-Shared for: [Nonlinear ATI Summer, 2016 in Cincinnati, OH](http://www.apa.org/science/resources/ati/nonlinear.aspx)
+Shared for: [Nonlinear ATI Summer, 2016 and 2017 in Cincinnati, OH](http://www.apa.org/science/resources/ati/nonlinear.aspx)
 
 If you find this code useful we encourage you to cite the crqa library publication:
  
