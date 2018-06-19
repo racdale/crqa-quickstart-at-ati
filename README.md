@@ -2,7 +2,7 @@
 
 Demonstration R code for some recurrence over text and other categorical series.
 
-Demo coded by: Rick Dale, cognaction.org/rick/ 
+Demo coded by: [Rick Dale](http://rdale.bol.ucla.edu)
 
 Shared for: [Nonlinear ATI Summer, 2016 and 2017 in Cincinnati, OH](http://www.apa.org/science/resources/ati/nonlinear.aspx)
 
