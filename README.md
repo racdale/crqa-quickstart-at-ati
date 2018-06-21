@@ -4,9 +4,9 @@ Demonstration R code for some recurrence over text and other categorical series.
 
 Demo coded by: [Rick Dale](http://rdale.bol.ucla.edu)
 
-Shared for: [Nonlinear ATI Summer, 2016 and 2017 in Cincinnati, OH](http://www.apa.org/science/resources/ati/nonlinear.aspx)
+Shared for: [Nonlinear ATI Summer, 2016-2018 in Cincinnati, OH](http://www.apa.org/science/resources/ati/nonlinear.aspx)
 
-If you find this code useful we encourage you to cite the crqa library publication:
+If you find this code useful we encourage you to cite the `crqa` library publication:
  
 > Coco, M. I. & Dale, R. (2014). Cross-recurrence quantification analysis of categorical and continuous time series: an R package. *Frontiers in Quantitative Psychology and Measurement*, *5*, 510.
 > [http://journal.frontiersin.org/article/10.3389/fpsyg.2014.00510/full](http://journal.frontiersin.org/article/10.3389/fpsyg.2014.00510/full)
@@ -14,6 +14,8 @@ If you find this code useful we encourage you to cite the crqa library publicati
 For quick start view the PDF **ATI_Demo_RStudio.pdf**. 
 
 Other code samples:
+
+* **slidingJRP.R**: Illustrating how one can slide recurrence plots (RPs) across each other to obtain a lagged (or "sliding") joint recurrence profile (JRP). This can help overcome the assumption that JRP uses, that recurrences across systems will be aligned simultaneously. Code to help with interesting work of Dr. Shimizu Daichi (Tokyo) and Dr. Mustafa Demir (ASU).
 
 * **wordFullExample.R**: An example of processing transcript to convert text into numeric series and then perform analysis over it. Also includes an example of LIWC processing for RQA (thanks to Lena Mueller).
 
